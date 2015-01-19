@@ -29,11 +29,11 @@ action :set do
 
   fqdn = "#{new_resource.short_hostname}.#{new_resource.domain_name}"
 
-  hostsfile_entry GetIP.local do
-    hostname fqdn
-    aliases [new_resource.short_hostname]
-    unique true
-  end
+  #hostsfile_entry GetIP.local do
+  #  hostname fqdn
+  #  aliases [new_resource.short_hostname]
+  #  unique true
+  #end
 
   # http://www.debian.org/doc/manuals/debian-reference/ch05.en.html#_the_hostname_resolution
   hostsfile_entry '127.0.1.1' do
